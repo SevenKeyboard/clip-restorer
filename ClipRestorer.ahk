@@ -9,7 +9,7 @@
 class VersionManager_ClipRestorer
 {
     static _ := VersionManager_ClipRestorer._init()
-    static _init()    {
+    _init()    {
         global
         CLIPRESTORER_VERSION := "1.0.0"
     }
