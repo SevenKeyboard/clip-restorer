@@ -1,4 +1,4 @@
-﻿#Requires AutoHotkey v1.1.17+
+﻿#Requires AutoHotkey v1.1.35+
 ;==============================================================
 ; ClipRestorer — Clipboard auto-restore helper with hotkey callbacks
 ;
