@@ -39,11 +39,11 @@ class ClipRestorer
         result := false
         this.scheduleRestore(false)
         if (this.waitAvailability(0.5))    {
-            Clipboard := ""
+            clipboard := ""
             if (this.hasBackup())    {
                 this.loadBackup()
                 clipWait % timeout, true
-                result := !ErrorLevel
+                result := !errorLevel
             }
         }
         this.deleteBackup()
@@ -77,11 +77,11 @@ class ClipRestorer
     ;----------------------------
     createBackup()    {
         global
-        clipRestorerClipboardBackup_EA52BF2B := ClipboardAll
+        clipRestorerClipboardBackup_EA52BF2B := clipboardAll
     }
     loadBackup()    {
         global
-        Clipboard := clipRestorerClipboardBackup_EA52BF2B
+        clipboard := clipRestorerClipboardBackup_EA52BF2B
     }
     deleteBackup()    {
         global
