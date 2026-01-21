@@ -77,19 +77,19 @@ class ClipRestorer
     ;----------------------------
     createBackup()    {
         global
-        EA52BF2B_962B_460E_993C_38B672D0D709 := ClipboardAll
+        clipRestorerClipboardBackup_EA52BF2B := ClipboardAll
     }
     loadBackup()    {
         global
-        Clipboard := EA52BF2B_962B_460E_993C_38B672D0D709
+        Clipboard := clipRestorerClipboardBackup_EA52BF2B
     }
     deleteBackup()    {
         global
-        EA52BF2B_962B_460E_993C_38B672D0D709 := ""
+        clipRestorerClipboardBackup_EA52BF2B := ""
     }
     hasBackup()    {
         global
-        return (isSet(EA52BF2B_962B_460E_993C_38B672D0D709) && EA52BF2B_962B_460E_993C_38B672D0D709 !== "")
+        return (isSet(clipRestorerClipboardBackup_EA52BF2B) && clipRestorerClipboardBackup_EA52BF2B !== "")
     }
     ;----------------------------
     blockClipboardChangedCallbacks(onoff := true)    {
