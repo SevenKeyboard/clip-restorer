@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <AssemblyName>ClipRestorer.Smoke</AssemblyName>
+    <RootNamespace>ClipRestorerVerification</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <IsAotCompatible>true</IsAotCompatible>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="Exists('$(MSBuildProjectDirectory)/SnapshotTests.cs')">
+    <DefineConstants>$(DefineConstants);SNAPSHOT_TESTS</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="Exists('$(MSBuildProjectDirectory)/NativePayloadTests.cs')">
+    <DefineConstants>$(DefineConstants);NATIVE_PAYLOAD_TESTS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/SevenKeyboard.ClipRestorer/SevenKeyboard.ClipRestorer.csproj" />
+  </ItemGroup>
+</Project>
